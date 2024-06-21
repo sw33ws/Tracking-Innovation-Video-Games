@@ -1,0 +1,113 @@
+.responsiveContainer {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 10px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding-top: 25px;
+    height: 0px;
+}
+
+.navTitle {
+    padding-bottom: 10px; 
+    font-weight: bold; 
+    font-size: 20px;
+}
+
+#navList {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+nav ul li {
+    padding: 8px 20px;
+}
+
+#hamburgerMenu {
+    display: none;
+    position: relative;
+}
+
+#bar1, #bar2, #bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    margin: 3px;
+}
+
+/* Main page, including the article and the socials */
+
+/* setting the article length */
+main {
+    display: flex;
+}
+
+article {
+    width: clamp(45ch, 50%, 75ch)
+}
+
+.socialList {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+.socials {
+    display: block;
+    position: sticky;
+    top: 0;
+    height: 25px;
+    margin-top: 125px;
+    padding-top: 25px;
+}
+
+.socalItem {
+    margin: 10px;
+    font-size: 2em;
+    color: black;
+}
+
+@media only screen and (max-width: 800px) {
+    .responsiveContainer {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        height: auto;
+        display: flex;
+        justify-content: end;
+    }
+    /* making the list hidden by default, it repears when the hamburger menu is clicked */
+    #navList {
+        display: none;
+    }
+    #navList.active {
+        display: block;
+    }
+    nav ul li {
+        display: inline;
+    }
+
+    /* hamburger Menu */
+    #hamburgerMenu {
+        display: block;
+    }
+    /* three bars in the hamburger menu */
+    #bar1.active1 {
+        transform:rotate(45deg);
+    }
+
+    #bar2.active2 {
+        display: none;
+    }
+
+    #bar3.active3 {
+        transform:rotate(135deg);
+        position: relative;
+        top: -9px;
+    }
+  }
