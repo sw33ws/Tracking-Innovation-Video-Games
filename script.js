@@ -1,3 +1,4 @@
+let navBackground = document.getElementById("navController");
 let listController = document.getElementById("navList");
 
 let hamburgerContoller = document.getElementById("hamburgerMenu");
@@ -7,8 +8,10 @@ let bar2 = document.getElementById("bar2");
 let bar3 = document.getElementById("bar3");
 
 function hamburgerMenu() {
+    navBackground.classList.toggle('active');
     listController.classList.toggle('active');
 
+    hamburgerContoller.classList.toggle('active');
     bar1.classList.toggle('active1');
     bar2.classList.toggle('active2');
     bar3.classList.toggle('active3');
