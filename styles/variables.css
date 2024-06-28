@@ -1,3 +1,5 @@
 :root {
     --black: black;
+    --backgroundColor: #333;
+    --highlightText: #f2f2f2;
 }

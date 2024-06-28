@@ -1,3 +1,8 @@
+*, body, html {
+    padding: 0;
+    margin: 0;
+}
+
 .responsiveContainer {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -45,10 +50,11 @@ nav ul li {
 /* setting the article length */
 main {
     display: flex;
+    margin-top: 50px;
 }
 
 article {
-    width: clamp(45ch, 50%, 75ch)
+    width: clamp(500px, 80%, 1000px)
 }
 
 .socialList {
@@ -72,7 +78,7 @@ article {
     color: black;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
     .responsiveContainer {
         grid-template-columns: 1fr;
     }
@@ -80,6 +86,12 @@ article {
         height: auto;
         display: flex;
         justify-content: end;
+        margin: 10px;
+    }
+    nav.active {
+        background-color: var(--backgroundColor);
+        margin: 0;
+        padding: 0;
     }
     /* making the list hidden by default, it repears when the hamburger menu is clicked */
     #navList {
@@ -87,18 +99,25 @@ article {
     }
     #navList.active {
         display: block;
+        color: var(--highlightText);
+        padding: 10px;
     }
     nav ul li {
         display: inline;
+        padding: 10px;
     }
 
     /* hamburger Menu */
     #hamburgerMenu {
         display: block;
     }
+    #hamburgerMenu.active {
+        margin-top: 15px;
+    }
     /* three bars in the hamburger menu */
     #bar1.active1 {
         transform:rotate(45deg);
+        background-color: var(--highlightText);
     }
 
     #bar2.active2 {
@@ -109,5 +128,21 @@ article {
         transform:rotate(135deg);
         position: relative;
         top: -9px;
+        background-color: var(--highlightText);
+    }
+
+    article {
+        text-align: center;
+        margin: 15px;
+    }
+
+    main {
+        margin-top: 0px;
+    }
+
+    .socials {
+        position: fixed;
+        bottom: 0;
+        right: 0;
     }
   }
