@@ -53,8 +53,20 @@ main {
     margin-top: 50px;
 }
 
+header {
+    margin-bottom: 50px;
+}
+
+#pageTitle {
+    font-size: 2.5em;
+}
+
 article {
     width: clamp(500px, 80%, 1000px)
+}
+
+article p, article hr {
+    margin-bottom: 15px;
 }
 
 .socialList {
@@ -75,7 +87,7 @@ article {
 .socalItem {
     margin: 10px;
     font-size: 2em;
-    color: black;
+    color: var(--black);
 }
 
 @media only screen and (max-width: 750px) {
@@ -138,6 +150,7 @@ article {
 
     main {
         margin-top: 0px;
+        margin-right: 2em;
     }
 
     .socials {
