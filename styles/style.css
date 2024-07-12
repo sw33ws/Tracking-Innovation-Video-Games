@@ -1,6 +1,14 @@
-*, body, html {
+*, html, body {
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--backgroundColor);
 }
 
 .responsiveContainer {
@@ -20,6 +28,8 @@ nav {
     padding-bottom: 10px; 
     font-weight: bold; 
     font-size: 20px;
+    color: var(--mainHighlight);
+    text-decoration: underline;
 }
 
 #navList {
@@ -32,6 +42,11 @@ nav ul li {
     padding: 8px 20px;
 }
 
+nav ul li a {
+    color: var(--secondaryHighlight);
+    text-decoration: none;
+}
+
 #hamburgerMenu {
     display: none;
     position: relative;
@@ -40,7 +55,7 @@ nav ul li {
 #bar1, #bar2, #bar3 {
     width: 30px;
     height: 5px;
-    background-color: black;
+    background-color: var(--pageText);
     display: block;
     margin: 3px;
 }
@@ -59,6 +74,13 @@ header {
 
 #pageTitle {
     font-size: 2.5em;
+    background-image: linear-gradient(90deg, var(--mainHighlight), var(--secondaryHighlight));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sectionTitle {
+    color: var(--secondaryHighlight);
 }
 
 article {
@@ -75,6 +97,11 @@ article p, article hr {
     margin: 0; /* Remove margins */
 }
 
+.socialList li {
+    background-color: var(--socialBackground);
+    margin-top: 2px;
+}
+
 .socials {
     display: block;
     position: sticky;
@@ -87,7 +114,7 @@ article p, article hr {
 .socalItem {
     margin: 10px;
     font-size: 2em;
-    color: var(--black);
+    color: var(--socialIconColor);
 }
 
 @media only screen and (max-width: 750px) {
@@ -101,7 +128,7 @@ article p, article hr {
         margin: 10px;
     }
     nav.active {
-        background-color: var(--backgroundColor);
+        background-color: var(--navBackgroundColor);
         margin: 0;
         padding: 0;
     }
@@ -110,8 +137,7 @@ article p, article hr {
         display: none;
     }
     #navList.active {
-        display: block;
-        color: var(--highlightText);
+        display: flex;
         padding: 10px;
     }
     nav ul li {
@@ -119,17 +145,21 @@ article p, article hr {
         padding: 10px;
     }
 
+    nav ul li a {
+        color: var(--darkNavText);
+    }
+
     /* hamburger Menu */
     #hamburgerMenu {
         display: block;
     }
     #hamburgerMenu.active {
-        margin-top: 15px;
+        margin-top: 30px;
     }
     /* three bars in the hamburger menu */
     #bar1.active1 {
         transform:rotate(45deg);
-        background-color: var(--highlightText);
+        background-color: var(--darkNavText);
     }
 
     #bar2.active2 {
@@ -140,7 +170,7 @@ article p, article hr {
         transform:rotate(135deg);
         position: relative;
         top: -9px;
-        background-color: var(--highlightText);
+        background-color: var(--darkNavText);
     }
 
     article {
@@ -151,6 +181,11 @@ article p, article hr {
     main {
         margin-top: 0px;
         margin-right: 2em;
+    }
+
+    .socialList li {
+        background-color: transparent;
+        margin-top: 2px;
     }
 
     .socials {

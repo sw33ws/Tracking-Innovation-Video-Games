@@ -1,5 +1,13 @@
 :root {
-    --black: black;
-    --backgroundColor: #333;
-    --highlightText: #f2f2f2;
+    --backgroundColor: #FBFBFB; /* White */
+    --pageText: #201A23; /* Raisin Black */
+
+    --navBackgroundColor: #2E2532; /* Raisin Black, but lighter*/
+    --darkNavText: var(--secondaryHighlight);
+
+    --socialBackground: var(--backgroundColor);
+    --socialIconColor: var(--pageText);
+
+    --secondaryHighlight: #0FA3B1; /* Moonstone */
+    --mainHighlight: #F2BB05; /* Amber */
 }
