@@ -9,6 +9,7 @@ html {
 
 body {
     background-color: var(--backgroundColor);
+    color: var(--pageText);
 }
 
 .responsiveContainer {
@@ -92,11 +93,22 @@ article p, article hr {
 }
 
 article img, article iframe {
-    display:block;
+    display: block;
     width: 60%;
     margin: auto;
-    width: 500px;
-    height: 300px;
+    max-width: 500px;
+    max-height: 300px;
+    padding: 10px 0px;
+}
+
+.doubleImages {
+    display: flex;
+    gap: 10px;
+}
+
+.doubleImages img, .doubleImages iframe {
+    max-width: 480px;
+    max-height: 300px;
 }
 
 .socialList {
