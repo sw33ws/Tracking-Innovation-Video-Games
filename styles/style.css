@@ -91,6 +91,14 @@ article p, article hr {
     margin-bottom: 15px;
 }
 
+article img, article iframe {
+    display:block;
+    width: 60%;
+    margin: auto;
+    width: 500px;
+    height: 300px;
+}
+
 .socialList {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
