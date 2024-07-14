@@ -118,6 +118,11 @@ article p {
     font-size: 1.1em;
 }
 
+article ul{
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
 /* images */
 article img, article iframe {
     display: block;
@@ -186,7 +191,7 @@ footer h1 {
 
 .referencesContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .references {
@@ -197,6 +202,10 @@ footer h1 {
 }
 
 @media only screen and (max-width: 750px) {
+    html{
+        scroll-padding-top:100px;
+    }
+
     .responsiveContainer {
         grid-template-columns: 1fr;
     }
