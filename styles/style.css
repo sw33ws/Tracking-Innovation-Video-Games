@@ -25,6 +25,7 @@ body {
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 10px;
+    background-color: var(--backgroundColor);
 }
 
 nav {
@@ -75,7 +76,8 @@ nav ul li a {
 /* setting the article length */
 main {
     display: flex;
-    margin-top: 50px;
+    padding-bottom: 2em;
+    padding-top: 50px;
 }
 
 header {
@@ -99,7 +101,11 @@ header {
 }
 
 article {
-    width: clamp(500px, 80%, 1000px)
+    width: clamp(500px, 80%, 1000px);
+    /* background-color: var(--backgroundColor); */
+    padding-left: 15px;
+    border-left: 3px solid var(--secondaryHighlight);
+    margin-right: 1em;
 }
 
 article p, article hr {
@@ -185,7 +191,6 @@ article img, article iframe {
 /* footer */
 footer {
     padding: 2em 4em 2em 2em;
-    margin-top: 2em;
     background-color: var(--navBackgroundColor);
 }
 
@@ -277,7 +282,7 @@ footer h1 {
     }
 
     .socialList li {
-        background-color: transparent;
+        background-color: var(--backgroundColor);
         margin-top: 2px;
     }
 
@@ -285,5 +290,11 @@ footer h1 {
         position: fixed;
         bottom: 0;
         right: 0;
+    }
+
+    .socalItem {
+        margin: 10px;
+        font-size: 2em;
+        color: var(--pageText);
     }
   }
